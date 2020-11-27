@@ -12,6 +12,11 @@ export default {
     ]
   },
 
+  router: {
+    linkActiveClass: 'active-link',
+    linkExactActiveClass: 'exact-active-link',
+  },
+
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
   ],
@@ -31,7 +36,12 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
+    '@nuxtjs/axios'
   ],
+
+  axios: {
+    baseURL: process.env.BASE_URL || 'http://localhost:3000'
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
